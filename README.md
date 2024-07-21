@@ -1,1 +1,1 @@
-Projeto de ruby com bdd e page objects da aplicação Starbugs
+Projeto de ruby com bdd, Capybara, RSpec e page objects da aplicação Starbugs
