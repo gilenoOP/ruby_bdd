@@ -12,8 +12,8 @@ class CheckoutPage
         expect(delivery.text).to eql delivery_price
     end
 
-    def assert_total_price(value)
+    def assert_total_price(total_price)
         price = find('.total-price')
-        expect(price.text).to eql value
+        expect(price.text).to eql total_price
     end
 end
