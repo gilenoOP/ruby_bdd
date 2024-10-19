@@ -49,3 +49,14 @@ Scenario: Cupom Inválido
     # When eu aplico esse cupom de desconto
     # Then devo ver a seguinte notificação "Cupom inválido!"
     #     And o valor final deve permanecer o mesmo
+
+# O cenário abaixo é apenas para apresentar uma forma de implementação dos dois casos de testes acima dentro de um Scenario Outline ()
+@ddt
+Scenario Outline: Tentativa de aplicar o desconto
+    When aplico o seguinte cupom: "<Cupom>"
+    Then devo ver a notificação "<Saída>"
+        And o valor final da compra deve permanecer o mesmo
+Examples:
+| Cupom      | Saída           |
+| PROMO20    | Cupom expirado! |
+| PROMO10000 | Cupom inválido! |
