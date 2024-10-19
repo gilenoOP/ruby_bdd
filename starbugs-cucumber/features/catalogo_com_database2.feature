@@ -1,5 +1,6 @@
 Feature: Catálogo de cafés
-    Como um usuário do site, eu quero ver o catálogo de cafés na página principal para que eu possa escolher e saber mais sobre os produtos disponíveis
+    Como um usuário do site, eu quero ver o catálogo de cafés na página principal
+    Para que eu possa escolher e saber mais sobre os produtos disponíveis
 
     Scenario: Acessar o catálogo de café na página principal
         When acesso a home do Starbugs
@@ -15,7 +16,7 @@ Feature: Catálogo de cafés
         Then devo ver a página de checkout com os detalhes do produto solicitado
             And o valor total da compra desse produto deve ser "R$ 19,99"
 
-    Scenario: Café indisponível
+    Scenario: Iniciar a compra de um café indisponível
         Given que estou na home do Starbugs
             And que desejo comprar o produto:
             | product  | Expresso Cremoso |
